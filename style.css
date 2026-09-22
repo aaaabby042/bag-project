@@ -1,0 +1,314 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #b8d3ee;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+
+
+
+.page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+}
+
+
+
+
+.sidebar {
+    min-height: 100vh;
+    padding: 22px 18px;
+    border-right: 1px solid #111;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-title {
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid #111;
+
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.sidebar-title span {
+    float: right;
+}
+
+
+
+.object-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.object-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.object-list a {
+    display: block;
+
+    padding: 6px 3px;
+
+    color: #111;
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition: 0.15s;
+}
+
+.object-list a span {
+    display: inline-block;
+    width: 28px;
+
+    font-size: 9px;
+    opacity: 0.55;
+}
+
+.object-list a:hover {
+    background: #111;
+    color: #b8d3ee;
+
+    padding-left: 8px;
+}
+
+
+
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #111;
+
+    font-size: 9px;
+    line-height: 1.4;
+    letter-spacing: 0.7px;
+}
+
+.sidebar-bottom p {
+    margin: 0 0 3px 0;
+}
+
+.sidebar-bottom a {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #111;
+    text-decoration: none;
+}
+
+.sidebar-bottom a:hover {
+    text-decoration: underline;
+}
+
+
+
+.archive {
+    min-width: 0;
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-rows:
+        48px
+        1fr
+        42px;
+}
+
+
+
+
+.topbar {
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #111;
+
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+
+
+.visual {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    padding: 50px;
+}
+
+
+/* YOUR OBJECT IMAGE */
+
+.objects-image {
+    display: block;
+
+    width: min(900px, 82%);
+    height: auto;
+
+    mix-blend-mode: multiply;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.objects-image:hover {
+    transform: scale(1.025);
+}
+
+
+
+
+.caption {
+    position: absolute;
+
+    left: 35px;
+    bottom: 30px;
+
+    z-index: 2;
+}
+
+.caption h1 {
+    margin: 0 0 12px 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(38px, 5vw, 75px);
+    line-height: 0.82;
+
+    font-weight: normal;
+    letter-spacing: -4px;
+}
+
+.caption p {
+    margin: 0;
+
+    font-size: 9px;
+    line-height: 1.5;
+
+    letter-spacing: 1px;
+}
+
+
+
+
+.bottom-bar {
+    border-top: 1px solid #111;
+
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+
+
+@media (max-width: 700px) {
+
+    .page {
+        grid-template-columns: 120px 1fr;
+    }
+
+    .sidebar {
+        padding: 15px 10px;
+    }
+
+    .object-list a {
+        font-size: 9px;
+    }
+
+    .object-list a span {
+        display: none;
+    }
+
+    .visual {
+        padding: 20px;
+        min-height: 500px;
+    }
+
+    .objects-image {
+        width: 100%;
+    }
+
+    .caption {
+        left: 15px;
+        bottom: 15px;
+    }
+
+    .caption h1 {
+        letter-spacing: -2px;
+    }
+
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+   color: #111111;
+}
+
+h1 {
+    margin-top: 70px;
+    margin-bottom: 35px;
+
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    text-align: center;
+}
+
+
+body > img {
+    display: block;
+
+    width: 70%;
+    max-width: 850px;
+    height: auto;
+
+    margin: 0 auto 70px auto;
+}
